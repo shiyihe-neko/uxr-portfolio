@@ -1,18 +1,119 @@
 const projects = [
+{
+  "id": "qualivision",
+  "number": "01",
+  "short": "QualiVision",
+  "category": "HUMAN–AI INTERACTION",
+  "color": "blue",
+  "title": "Traceable analysis. AI-supported reflection.",
+  "question": "How can traceable analysis and AI-supported reflection help researchers make sense of qualitative video data?",
+  "summary": "Designing QualiVision for traceable qualitative video analysis, connecting evidence, codes, and interpretations while exploring how AI prompts can support reflection and preserve researcher control.",
+  "methods": [
+    "Research through design",
+    "System prototyping",
+    "Qualitative analysis",
+    "Traceability",
+    "AI-supported reflection"
+  ],
+  "stat": "Design probe · Working prototype",
+  "venue": "VL/HCC 2026 GC",
+  "time": "5 min",
+  "takeaway": "Make interpretations traceable and use AI to prompt reflection while researchers retain control.",
+  "intro": "Qualitative video analysis involves revisiting evidence as codes and interpretations evolve. I built QualiVision to connect video, transcripts, and coding in one workspace. The research explores traceability across that process and AI prompts that help researchers question assumptions, compare interpretations, and revisit source evidence.",
+  "role": "As the sole author, I lead the project from problem framing and review of existing tools to interaction design, prototype implementation, and evaluation planning. I also use the prototype in my own video-based research analysis to identify workflow needs.",
+  "team": "Shiyi He",
+  "sections": [
+    {
+      "id": "question",
+      "label": "The problem",
+      "title": "A code is only useful if you can revisit what it means.",
+      "body": "Video-analysis work moves between clips, transcripts, spreadsheets, and notes. The design challenge is to preserve their relationships as an analysis changes: what happened, where it happened, how it was coded, and why that interpretation seemed useful.",
+      "callout": "How do we support evolving interpretations while preserving a clear route back to the source?"
+    },
+    {
+      "id": "approach",
+      "label": "Design approach",
+      "title": "Build around the analysis workflow.",
+      "body": "I use QualiVision as a design probe. Reviewing existing tools and using my own prototype helps me identify where coding, comparison, and reflection need better support. This directs the system toward a connected workspace rather than a collection of isolated analysis features.",
+      "steps": [
+        "Review existing tools",
+        "Prototype the workflow",
+        "Use it in analysis",
+        "Refine the design"
+      ],
+      "extra": "The research also explores a live spreadsheet layer for inspectable, editable records. Stable references between video segments and analytic records are central to this direction."
+    },
+    {
+      "id": "evidence",
+      "label": "The prototype",
+      "title": "Bring the evidence and the interpretation together.",
+      "body": "The initial prototype supports video playback, transcript editing, multiple coding streams, undo and redo, and preliminary visual summaries and reports. It has been used in my own video-based study analyses.",
+      "cards": [
+        [
+          "Navigate the evidence",
+          "Keep video review, transcripts, and annotations in a shared workspace."
+        ],
+        [
+          "Preserve alternatives",
+          "Use separate coding streams to retain different analytic perspectives."
+        ],
+        [
+          "Develop the next layer",
+          "Explore synchronized spreadsheet records, visual comparison, and AI prompts as the system develops."
+        ]
+      ],
+      "widget": "qualivision"
+    },
+    {
+      "id": "implications",
+      "label": "Design principles",
+      "title": "Make assistance an invitation to inspect.",
+      "body": "My design direction is to make visualizations and AI prompts support questions, comparisons, and reflection. Suggestions should point researchers toward relevant evidence and leave interpretation open to revision.",
+      "cards": [
+        [
+          "Retain researcher control",
+          "Let researchers decide whether a suggestion fits their analysis."
+        ],
+        [
+          "Keep evidence traceable",
+          "Preserve links between source segments, codes, and analytic notes."
+        ],
+        [
+          "Support revision",
+          "Allow codes and interpretations to change as understanding develops."
+        ]
+      ]
+    },
+    {
+      "id": "reflection",
+      "label": "Next evaluation",
+      "title": "Evaluate sensemaking as well as task completion.",
+      "body": "The planned evaluation combines Comparative Structured Observation with case studies. It would compare QualiVision with a conventional multi-tool workflow on comparable analysis tasks, using performance measures, think-aloud data, and interviews. Longer use would examine how interpretations evolve.",
+      "extra": "Current status: a working prototype, with comparative evaluation and longer case studies planned."
+    }
+  ],
+  "links": [
+    [
+      "Read the paper",
+      "https://arxiv.org/abs/2608.13594"
+    ]
+  ],
+  "sourceNote": "Based on Towards Scaling Qualitative Analysis of Video Data, project design notes, and my UXR résumé. Prototype capabilities and proposed extensions are distinguished in the text. The interaction below is a conceptual reconstruction with a fictional example, not participant evidence."
+},
   {
-    id: 'wrangling', number: '01', short: 'Wrangling tools', category: 'HUMAN–AI INTERACTION', color: 'sage',
-    title: 'Same data. Different tools. Different ways of thinking.',
+    id: 'wrangling', number: '02', short: 'Wrangling tools', category: 'HUMAN–AI INTERACTION', color: 'sage',
+    title: 'Same data, different tools, different ways of thinking.',
     question: 'How do interfaces shape the way people clean data?',
     summary: 'Looking beyond task completion to understand how people plan, explore, and verify their work across four tool paradigms.',
-    methods: ['Mixed methods', 'Think-aloud', 'Remote study'],
-    stat: '40 participants · 4 tools', venue: 'VL/HCC 2026', time: '6 min',
+    methods: ['Mixed methods', 'Think-aloud', 'Remote study', 'Crowdwork study'],
+    stat: '40 freelancers', venue: 'VL/HCC 2026', time: '6 min',
     takeaway: 'Tool choice shapes strategies, but does not guarantee better outcomes.',
     intro: 'Data cleaning is more than a sequence of corrections. People must decide what looks wrong, what to change, and whether to trust the result. I studied these decisions across ChatGPT, Jupyter, Excel, and OpenRefine.',
     role: 'As first author, I owned the research end to end: study design, recruitment, reVISit implementation and remote deployment, data collection, mixed-methods analysis, synthesis, and writing.',
     team: 'Shiyi He, El Kindi Rezig, Paul Rosen, Andrew M. McNutt',
     sections: [
       {id:'question', label:'The question', title:'A feature list cannot explain a workflow.', body:'The study examined how interface paradigms relate to cleaning strategies and outcomes. It compared a conversational assistant, a notebook, a spreadsheet, and a visual wrangler.', callout:'Research question: How does the tool change the way people approach the same data problem?'},
-      {id:'approach', label:'Study design', title:'Watch the process. Examine the result.', body:'Forty participants completed two cleaning tasks in a between-subjects study. reVISit captured screen and think-aloud recordings. Tool access used browser environments, including noVNC and JupyterLite. Analysis combined outputs, workload and usability questionnaires, and the Technical Dimensions of Programming Systems framework.', steps:['Assign one tool','Complete two tasks','Capture work + reasoning','Compare outputs + strategies'], extra:'This combination connects what participants produced with how they got there. My synthesis translated behavioral evidence into recommendations for task guidance, visible transformations, and human verification.'},
+      {id:'approach', label:'Study design', title:'Watch the process. Examine the result.', body:'Forty freelancers completed two cleaning tasks in a between-subjects study. reVISit captured screen and think-aloud recordings. Tool access used browser environments, including noVNC and JupyterLite. Analysis combined outputs, workload and usability questionnaires, and the Technical Dimensions of Programming Systems framework.', steps:['Assign one tool','Complete two tasks','Capture work + reasoning','Compare outputs + strategies'], extra:'This combination connects what participants produced with how they got there. My synthesis translated behavioral evidence into recommendations for task guidance, visible transformations, and human verification.'},
       {id:'evidence', label:'Key finding', title:'A strategy shift, not a universal winner.', body:'No tool showed a consistent outcome advantage. Data-centered interfaces encouraged opportunistic corrections; abstraction-centered interfaces supported systematic transformations with added cognitive demands. The analysis was exploratory, not a statistical ranking.', callout:'The design opportunity is to support transitions between seeing a problem, applying a transformation, and checking its consequences.', widget:'wrangling'},
       {id:'implications', label:'Design implications', title:'Make transformations visible and verifiable.', body:'The practical recommendations in my research synthesis focus on task-oriented guidance, visibility of data transformations, and human verification of AI assistance.', cards:[['Guide the next step','Help people connect a task goal with a suitable cleaning action.'],['Expose transformations','Make it possible to inspect what a correction changes.'],['Support verification','Keep human judgment involved when reviewing AI-assisted results.']], extra:'These are design recommendations from the study, rather than claims of a shipped product improvement.'},
       {id:'reflection', label:'Scope & reflection', title:'Preserve the distinction between capability and outcome.', body:'The study covers two tasks and short-term use. Its results characterize trade-offs within that setting. They do not establish a generally best wrangling tool.', extra:'A next evaluation could test whether the proposed guidance and verification features help people detect incomplete or inappropriate transformations.'}
@@ -21,12 +122,12 @@ const projects = [
     sourceNote:'Publication details and methods: the linked paper. Recommendation summary: my October 2026 UXR résumé. First authorship and end-to-end research ownership confirmed by Shiyi He. Illustrations on this page are explanatory reconstructions.'
   },
   {
-    id:'dsf', number:'02', short:'Data formats', category:'DEVELOPER EXPERIENCE', color:'peach',
-    title:'Is “human-friendly” actually easier to use?',
+    id:'dsf', number:'03', short:'Data formats', category:'DEVELOPER EXPERIENCE', color:'peach',
+    title:'Are “human-friendly” data formats easier to use?',
     question:'What makes a data format usable in practice?',
-    summary:'Combining a controlled usability study with practitioner interviews to look beyond the familiar debate over curly braces and indentation.',
-    methods:['Usability testing','Practitioner interviews','Mixed methods'],
-    stat:'215 study participants + 9 practitioners', venue:'VL/HCC 2026', time:'7 min',
+    summary:'Combining usability evaluation with practitioner interviews to understand how data formats shape the way people read, edit, and write data.',
+    methods:['Usability evaluation','Practitioner interviews','Mixed methods','Crowdwork study'],
+    stat:'215 crowd workers + 9 practitioners', venue:'VL/HCC 2026', time:'7 min',
     takeaway:'Usability extends beyond syntax to the tools, practices, and communities around a format.',
     intro:'JSON, YAML, XML, and their peers represent similar information in different ways. Developers have strong preferences, but preference alone does not explain how easily someone can read, edit, or maintain a file.',
     role:'As first author, I owned the research end to end: study design, recruitment, reVISit implementation and remote deployment, the 215-participant usability study, nine practitioner interviews, analysis, synthesis, and writing.',
@@ -42,33 +143,33 @@ const projects = [
     sourceNote:'Based on the DSF manuscript, presentation notes, and my UXR résumé. First authorship and end-to-end research ownership confirmed by Shiyi He. The linked publication provides the full research context. Code examples below are newly created illustrations, not experimental stimuli.'
   },
   {
-    id:'bibwrangler', number:'03', short:'BibWrangler', category:'TRUST & RESEARCH WORKFLOWS', color:'lavender',
+    id:'bibwrangler', number:'04', short:'BibWrangler', category:'INTERFACE & SYSTEM DESIGN', color:'lavender',
     title:'Cleaning references is also a question of trust.',
     question:'Where does bibliography assistance fit into real writing workflows?',
-    summary:'Examining issue discovery, reviewable automation, and adoption through task-based sessions and a two-week take-home phase.',
-    methods:['Workflow comparison','Interviews','Take-home study'],
-    stat:'Task sessions + 2-week follow-up', venue:'Research in progress', time:'5 min',
+    summary:'Designing and building a bibliography-cleaning system, then evaluating its interface and workflow fit through a remote lab study and a two-week take-home study.',
+    methods:['Workflow comparison','Remote lab study','Interviews','Take-home study'],
+    stat:'21 experts · Remote lab study + 2-week take-home study', venue:'Submitted to CHI', time:'5 min',
     takeaway:'Useful automation needs a place in the workflow—and a way to inspect its changes.',
     intro:'A bibliography can look finished while still containing duplicate records, missing metadata, or inconsistent formatting. BibWrangler approaches this work as data wrangling. The research asks how people notice issues, decide what matters, and assess suggested repairs.',
-    role:'As first author, I owned the research end to end: study design, recruitment, participant sessions, the two-week take-home phase, interview and survey coding, thematic synthesis, and writing.',
+    role:'As first author, I led the interface design, system development, and end-to-end research: study design, recruitment, the moderated remote lab study, the two-week take-home study, interview and survey coding, thematic synthesis, and writing.',
     team:'Shiyi He, El Kindi Rezig, Paul Rosen, Andrew McNutt',
     sections:[
       {id:'question', label:'The question', title:'Finding more issues is only part of the problem.', body:'Researchers bring existing habits and tools to bibliography work. They also have different standards for what deserves attention. The study therefore examines both the cleaning task and the surrounding writing workflow.', callout:'When does bibliography assistance save effort, and when does it create more checking or coordination?'},
-      {id:'approach', label:'Study design', title:'From a structured task to everyday use.', body:'The study script asks participants to clean bibliography files with BibWrangler and their usual workflow, while thinking aloud. Interviews probe issue severity, confidence, verification, and workflow fit. A two-week take-home phase then asks participants to use BibWrangler in their own work and describe the experience.', steps:['Observe cleaning','Compare workflows','Probe trust + fit','Follow up after two weeks'], extra:'The follow-up matters because a tool that helps in a prepared task may still be inconvenient to use during writing. This case does not report a final sample size or a quantitative improvement: the available protocols include evolving plans, and the portfolio uses the completed coding materials for preliminary qualitative themes.'},
+      {id:'approach', label:'Study design', title:'From a structured task to everyday use.', body:'The moderated remote lab study, conducted via Zoom, asked participants to clean bibliography files with BibWrangler and their usual workflow while thinking aloud. Interviews explored issue severity, confidence, verification, and workflow fit. Participants then used BibWrangler in their own work during a two-week take-home study and completed a questionnaire about their experience.', steps:['Remote lab study','Compare workflows','Interview participants','Two-week take-home study'], extra:'The study involved 21 experts. The take-home stage matters because a tool that helps in a prepared task may still be inconvenient to use during writing. It lets the evaluation extend from structured tasks to participants’ own bibliography work.'},
       {id:'evidence', label:'Emerging themes', title:'A useful checkpoint needs reviewable changes.', body:'The thematic analysis identifies four areas: workflows, situated quality standards, issue visibility, and automation and trust. These are preliminary themes from the available study materials.', cards:[['Fit is situational','Bibliography maintenance is distributed across writing stages and projects. BibWrangler can become a checking point rather than replace the whole workflow.'],['Visibility needs priorities','Surfacing more issues expands awareness, but also creates decisions about what to fix first and what can wait.'],['Trust needs inspection','Automation makes larger repairs tractable, while confidence depends on being able to review the changes.']], widget:'bib', extra:'These summaries paraphrase the coding themes. They do not reproduce identifiable participant responses or claim a measured effect.'},
       {id:'implications', label:'Design opportunities', title:'Help people review, prioritize, and return to writing.', body:'The following opportunities are portfolio synthesis from the emerging themes; they are not presented as implemented or evaluated features.', cards:[['Review the change','Provide a clear before-and-after view and a way to revisit recent edits.'],['Prioritize what matters','Distinguish consequential issues from formatting preferences and allow context-sensitive checks.'],['Reduce coordination','Explore closer integration with the writing environments people already use.']]},
-      {id:'reflection', label:'Scope & reflection', title:'Separate promising themes from demonstrated impact.', body:'The study materials support a qualitative account of workflow fit and trust. Final outcome comparisons and the exact sample remain to be finalized for this case study.', extra:'A next step is to connect each design opportunity to its supporting coded evidence and test whether it reduces review effort without obscuring consequential changes.'}
+      {id:'reflection', label:'Scope & reflection', title:'Separate promising themes from demonstrated impact.', body:'The study with 21 experts supports a qualitative account of workflow fit and trust. Structured remote tasks and a two-week take-home study capture different aspects of use, while longer-term adoption remains outside this study’s scope.', extra:'A next step is to connect each design opportunity to its supporting coded evidence and test whether it reduces review effort without obscuring consequential changes.'}
     ],
     links:[['Try BibWrangler','https://bib-wrangler.netlify.app/']],
-    sourceNote:'Based on the research script and preliminary thematic coding. Manuscript in preparation. First authorship and end-to-end research ownership confirmed by Shiyi He. Participant records, transcripts, and private source links are intentionally omitted from the portfolio.'
+    sourceNote:'Based on the research protocol and thematic coding. Submitted to CHI, as confirmed by Shiyi He. First authorship and end-to-end research ownership confirmed by Shiyi He. Participant records, transcripts, and private source links are intentionally omitted from the portfolio.'
   },
   {
-    id:'palette', number:'04', short:'Color palette tools', category:'ACCESSIBILITY & DESIGN BEHAVIOR', color:'yellow',
+    id:'palette', number:'05', short:'Color palette tools', category:'ACCESSIBILITY & DESIGN BEHAVIOR', color:'yellow',
     title:'The tool changes what a designer notices.',
     question:'How does palette assistance shape design attention?',
     summary:'Exploring the relationship between design aids, accessibility constraints, and creative judgment across four palette tools.',
     methods:['Think-aloud','Comparative evaluation','Remote study'],
-    stat:'40 designers · 4 palette tools', venue:'IEEE VIS Poster 2026', time:'4 min',
+    stat:'40 designers', venue:'IEEE VIS Poster 2026', time:'4 min',
     takeaway:'Assistance can make constraints actionable while narrowing attention toward what the tool checks.',
     intro:'Color palette design involves competing priorities. This exploratory study examined how different forms of assistance shape both the resulting palettes and the reasoning behind them.',
     role:'As first author, I owned the research end to end: tool comparison, task and study design, reVISit implementation and deployment, recruitment, data collection, qualitative and quantitative analysis, synthesis, and writing.',
@@ -83,4 +184,97 @@ const projects = [
     links:[['Read the paper','https://arxiv.org/abs/2608.19148'],['Explore the reVISit study','https://shiyihe-neko.github.io/reVISit_study/color-buddy/']],
     sourceNote:'Research summary: Trade-offs in Data Color Palette Design Tools. Coding vocabulary: project coding schema. First authorship and end-to-end research ownership confirmed by Shiyi He. The interactive palette is synthetic.'
   }
+,
+{
+  "id": "charles",
+  "number": "06",
+  "short": "ChARLES",
+  "category": "EXPLAINABLE ANALYTICS",
+  "color": "sand",
+  "title": "Make data changes understandable—and open to inspection.",
+  "question": "How can people explore data changes without reading every changed row?",
+  "summary": "Building an interface for exploring semantic explanations of database changes, with adjustable complexity and visual views of the data each explanation covers.",
+  "methods": [
+    "Interface design",
+    "System prototyping",
+    "Visual analytics",
+    "Explainability",
+    "Data semantics"
+  ],
+  "stat": "Interactive system demonstration",
+  "venue": "SIGMOD 2025 Demo",
+  "time": "5 min",
+  "takeaway": "An explanation interface should expose its scope and let people choose the detail they need.",
+  "intro": "A list of changed cells shows where data differs, but leaves people to work out the pattern. ChARLES generates semantic summaries that describe which records changed and how. I developed an interface that lets people explore those summaries, adjust their complexity, and inspect the records they describe.",
+  "role": "As first author, I developed the explanation-exploration interface, including attribute recommendations, adjustable explanation complexity, and data-coverage views. My work connected model-generated summaries to an interactive workflow for inspecting and comparing explanations.",
+  "team": "Shiyi He, Alexandra Meliou, Anna Fariha",
+  "sections": [
+    {
+      "id": "question",
+      "label": "The problem",
+      "title": "A difference is not yet an explanation.",
+      "body": "When a dataset changes, an analyst wants to know which groups changed and how. A detailed list of edits can be overwhelming, while an overly broad summary can hide important differences. The interface needs to make these alternatives understandable and inspectable.",
+      "callout": "What information does a person need to judge whether a change summary is useful?"
+    },
+    {
+      "id": "approach",
+      "label": "Interaction design",
+      "title": "Turn model settings into an exploration workflow.",
+      "body": "I designed a workflow for uploading two data versions, choosing a target attribute, reviewing recommended attributes, and requesting explanations. People can adjust how many attributes a summary uses and the balance between accuracy and interpretability.",
+      "steps": [
+        "Choose data versions",
+        "Select attributes",
+        "Compare summaries",
+        "Inspect coverage"
+      ],
+      "extra": "Defaults offer a starting point, while the controls let people refine the question and the level of detail they want to see."
+    },
+    {
+      "id": "evidence",
+      "label": "The interface",
+      "title": "Show the rule and the records it describes.",
+      "body": "The interface presents ranked explanations alongside their scores. Opening an explanation reveals a partition view: each region represents a group of records, with its size indicating coverage and further details available on inspection.",
+      "cards": [
+        [
+          "Recommend a starting point",
+          "Surface relevant attributes before asking users to configure a summary."
+        ],
+        [
+          "Expose the trade-off",
+          "Keep accuracy and interpretability visible when comparing alternatives."
+        ],
+        [
+          "Make coverage inspectable",
+          "Connect each conditional transformation to the data partition it describes."
+        ]
+      ],
+      "widget": "charles"
+    },
+    {
+      "id": "implications",
+      "label": "Design rationale",
+      "title": "Give people a way to question the summary.",
+      "body": "The design rationale is to make explanation exploration an iterative process. Attribute selection narrows the question, complexity controls change the form of the answer, and coverage views let people examine its scope.",
+      "extra": "My contribution connects model-generated results with a workflow people can configure, compare, and inspect."
+    },
+    {
+      "id": "reflection",
+      "label": "Scope & reflection",
+      "title": "A model summary is a hypothesis to examine.",
+      "body": "The published work is a system demonstration. Its summaries describe patterns in the supplied data; they do not establish the external cause of a change. This case does not claim a completed usability study or measured improvement in user performance.",
+      "extra": "A useful next evaluation would ask whether people can identify the affected records, understand the accuracy–interpretability trade-off, and recognize when a summary leaves important variation unexplained."
+    }
+  ],
+  "links": [
+    [
+      "Read the paper",
+      "https://doi.org/10.1145/3722212.3725089"
+    ],
+    [
+      "Open-access paper",
+      "https://arxiv.org/abs/2409.18386"
+    ]
+  ],
+  "sourceNote": "Based on the SIGMOD 2025 demonstration paper, interface design notes, and my UXR résumé. The explanations in the interactive example are synthetic and illustrate granularity rather than reproducing model output or empirical results."
+}
 ];

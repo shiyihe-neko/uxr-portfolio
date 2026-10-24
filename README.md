@@ -2,7 +2,7 @@
 
 A standalone, responsive UX research portfolio about how data tools shape understanding, strategy, and trust.
 
-Four case studies cover data wrangling tools, data serialization formats, BibWrangler, and color palette tools. Shiyi He is the first author and owns the research end to end on all four projects.
+Six case studies cover QualiVision, data wrangling tools, data serialization formats, BibWrangler, color palette tools, and ChARLES. Shiyi He is sole or first author across the six projects. The portfolio distinguishes system and design contributions from completed user studies and planned evaluation.
 
 The site supports continuous and guided reading, deep links to case study sections, and interactive explanatory examples. It is a static HTML/CSS/JavaScript website with no build step, application server, or ChatGPT login requirement.
 
@@ -56,6 +56,9 @@ A domain is optional. To use one later, add it in **Settings → Pages → Custo
 See [managing a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Research and content
+
+- [QualiVision: Towards Scaling Qualitative Analysis of Video Data](https://arxiv.org/abs/2608.13594)
+- [ChARLES](https://doi.org/10.1145/3722212.3725089)
 
 - [Reading Between the Curly Braces](https://arxiv.org/abs/2607.26211)
 - [How Wrangling Tools Shape Wrangling](https://arxiv.org/abs/2607.26198)
