@@ -240,139 +240,243 @@ const projects = [
     links:[['Read the paper','https://arxiv.org/abs/2607.26211']],
     sourceNote:'Based on the DSF manuscript, presentation notes, and my UXR résumé. First authorship and end-to-end research ownership confirmed by Shiyi He. The linked publication provides the full research context. Code examples below are newly created illustrations, not experimental stimuli.'
   },
-  {
-    id:'bibwrangler', number:'04', short:'BibWrangler', category:'INTERFACE & SYSTEM DESIGN', color:'lavender',
-    title:'Cleaning references is also a question of trust.',
-    question:'Where does bibliography assistance fit into real writing workflows?',
-    summary:'Designing and building a bibliography-cleaning system, then evaluating its interface and workflow fit through a remote lab study and a two-week take-home study.',
-    methods:['Workflow comparison','Remote lab study','Interviews','Take-home study'],
-    stat:'21 experts · Remote lab study + 2-week take-home study', venue:'Submitted to CHI', time:'5 min',
-    takeaway:'Useful automation needs a place in the workflow—and a way to inspect its changes.',
-    intro:'A bibliography can look finished while still containing duplicate records, missing metadata, or inconsistent formatting. BibWrangler approaches this work as data wrangling. The research asks how people notice issues, decide what matters, and assess suggested repairs.',
-    role:'As first author, I led the interface design, system development, and end-to-end research: study design, recruitment, the moderated remote lab study, the two-week take-home study, interview and survey coding, thematic synthesis, and writing.',
-    team:'Shiyi He, El Kindi Rezig, Paul Rosen, Andrew McNutt',
-    sections:[
-      {id:'question', label:'The question', title:'Finding more issues is only part of the problem.', body:'Researchers bring existing habits and tools to bibliography work. They also have different standards for what deserves attention. The study therefore examines both the cleaning task and the surrounding writing workflow.', callout:'When does bibliography assistance save effort, and when does it create more checking or coordination?'},
-      {id:'approach', label:'Study design', title:'From a structured task to everyday use.', body:'The moderated remote lab study, conducted via Zoom, asked participants to clean bibliography files with BibWrangler and their usual workflow while thinking aloud. Interviews explored issue severity, confidence, verification, and workflow fit. Participants then used BibWrangler in their own work during a two-week take-home study and completed a questionnaire about their experience.', steps:['Remote lab study','Compare workflows','Interview participants','Two-week take-home study'], extra:'The study involved 21 experts. The take-home stage matters because a tool that helps in a prepared task may still be inconvenient to use during writing. It lets the evaluation extend from structured tasks to participants’ own bibliography work.'},
-      {id:'evidence', label:'Emerging themes', title:'A useful checkpoint needs reviewable changes.', body:'The thematic analysis identifies four areas: workflows, situated quality standards, issue visibility, and automation and trust. These are preliminary themes from the available study materials.', cards:[['Fit is situational','Bibliography maintenance is distributed across writing stages and projects. BibWrangler can become a checking point rather than replace the whole workflow.'],['Visibility needs priorities','Surfacing more issues expands awareness, but also creates decisions about what to fix first and what can wait.'],['Trust needs inspection','Automation makes larger repairs tractable, while confidence depends on being able to review the changes.']], widget:'bib', extra:'These summaries paraphrase the coding themes. They do not reproduce identifiable participant responses or claim a measured effect.'},
-      {id:'implications', label:'Design opportunities', title:'Help people review, prioritize, and return to writing.', body:'The following opportunities are portfolio synthesis from the emerging themes; they are not presented as implemented or evaluated features.', cards:[['Review the change','Provide a clear before-and-after view and a way to revisit recent edits.'],['Prioritize what matters','Distinguish consequential issues from formatting preferences and allow context-sensitive checks.'],['Reduce coordination','Explore closer integration with the writing environments people already use.']]},
-      {id:'reflection', label:'Scope & reflection', title:'Separate promising themes from demonstrated impact.', body:'The study with 21 experts supports a qualitative account of workflow fit and trust. Structured remote tasks and a two-week take-home study capture different aspects of use, while longer-term adoption remains outside this study’s scope.', extra:'A next step is to connect each design opportunity to its supporting coded evidence and test whether it reduces review effort without obscuring consequential changes.'}
-    ],
-    links:[['Try BibWrangler','https://bib-wrangler.netlify.app/']],
-    sourceNote:'Based on the research protocol and thematic coding. Submitted to CHI, as confirmed by Shiyi He. First authorship and end-to-end research ownership confirmed by Shiyi He. Participant records, transcripts, and private source links are intentionally omitted from the portfolio.'
-  },
-  {
-    id:'palette', number:'05', short:'Color palette tools', category:'ACCESSIBILITY & DESIGN BEHAVIOR', color:'yellow',
-    title:'The tool changes what a designer notices.',
-    question:'How does palette assistance shape design attention?',
-    summary:'Exploring the relationship between design aids, accessibility constraints, and creative judgment across four palette tools.',
-    methods:['Think-aloud','Comparative evaluation','Remote study'],
-    stat:'40 designers', venue:'IEEE VIS Poster 2026', time:'4 min',
-    takeaway:'Assistance can make constraints actionable while narrowing attention toward what the tool checks.',
-    intro:'Color palette design involves competing priorities. This exploratory study examined how different forms of assistance shape both the resulting palettes and the reasoning behind them.',
-    role:'As first author, I owned the research end to end: tool comparison, task and study design, reVISit implementation and deployment, recruitment, data collection, qualitative and quantitative analysis, synthesis, and writing.',
-    team:'Shiyi He, Andrew McNutt',
-    sections:[
-      {id:'question', label:'The question', title:'What becomes visible becomes a design priority.', body:'The question was how direct manipulation, generation, inspection, and evaluation relate to designers’ decisions across different constraints.'},
-      {id:'approach', label:'Study design', title:'Compare reasoning alongside palette outcomes.', body:'Forty designers recruited through Prolific used Color Buddy, QualPal, Viz Palette, or ColorExplorer. Tasks concerned accessibility, thematic fit, and aesthetics. reVISit collected screens and think-aloud audio; analysis examined reasoning and palette metrics.', steps:['Assign a tool','Vary constraints','Capture reasoning','Inspect palettes'], extra:'The accompanying coding materials distinguish fine-tuning, broader changes, reframing, and different forms of evaluation. They offer a vocabulary for examining how people move through design decisions.'},
-      {id:'evidence', label:'Key finding', title:'Support guides attention as well as output.', body:'Accessibility-related patterns were more pronounced in constrained tasks. Some assistance also influenced palettes and reasoning when accessibility was not required. These are exploratory observations, not a tool ranking.', widget:'palette'},
-      {id:'implications', label:'Design opportunity', title:'Make constraints actionable. Keep exploration possible.', body:'A design opportunity is to make the purpose of assistance clear and let people decide how it relates to their current goal.', extra:'The palette explorer above is a new explanatory illustration. It is not participant data, a CVD simulation, or a recreation of the study’s outcome metrics.'},
-      {id:'reflection', label:'Scope & reflection', title:'Treat the patterns as a starting point.', body:'Small conditions and unequal accessibility-task assignment limit interpretation. More targeted evaluation is needed before claiming superiority.', extra:'Future work could examine when assistance prompts useful reflection and when it interrupts or prematurely constrains exploration.'}
-    ],
-    links:[['Read the paper','https://arxiv.org/abs/2608.19148'],['Explore the reVISit study','https://shiyihe-neko.github.io/reVISit_study/color-buddy/']],
-    sourceNote:'Research summary: Trade-offs in Data Color Palette Design Tools. Coding vocabulary: project coding schema. First authorship and end-to-end research ownership confirmed by Shiyi He. The interactive palette is synthetic.'
-  }
-,
 {
-  "id": "charles",
-  "number": "06",
-  "short": "ChARLES",
-  "category": "EXPLAINABLE ANALYTICS",
-  "color": "sand",
-  "title": "Make data changes understandable—and open to inspection.",
-  "question": "How can people explore data changes without reading every changed row?",
-  "summary": "Building an interface for exploring semantic explanations of database changes, with adjustable complexity and visual views of the data each explanation covers.",
+  "id": "bibwrangler",
+  "number": "04",
+  "short": "BibWrangler",
+  "category": "INTERFACE & SYSTEM DESIGN",
+  "color": "lavender",
+  "title": "Cleaning references is also a question of trust.",
+  "question": "Where does bibliography assistance fit into real writing workflows?",
+  "summary": "Designing and building a bibliography-cleaning system, then evaluating its interface and workflow fit through a remote lab study and a two-week take-home study.",
   "methods": [
-    "Interface design",
-    "System prototyping",
-    "Visual analytics",
-    "Explainability",
-    "Data semantics"
+    "Workflow comparison",
+    "Remote lab study",
+    "Interviews",
+    "Take-home study"
   ],
-  "stat": "Interactive system demonstration",
-  "venue": "SIGMOD 2025 Demo",
-  "time": "5 min",
-  "takeaway": "An explanation interface should expose its scope and let people choose the detail they need.",
-  "intro": "A list of changed cells shows where data differs, but leaves people to work out the pattern. ChARLES generates semantic summaries that describe which records changed and how. I developed an interface that lets people explore those summaries, adjust their complexity, and inspect the records they describe.",
-  "role": "As first author, I developed the explanation-exploration interface, including attribute recommendations, adjustable explanation complexity, and data-coverage views. My work connected model-generated summaries to an interactive workflow for inspecting and comparing explanations.",
-  "team": "Shiyi He, Alexandra Meliou, Anna Fariha",
+  "stat": "21 experts · Remote lab study + 2-week take-home study",
+  "venue": "Submitted to CHI",
+  "time": "4 min",
+  "takeaway": "Useful automation needs a place in the workflow—and a way to inspect its changes.",
+  "intro": "A bibliography can look finished while still containing duplicate records, missing metadata, or inconsistent formatting. BibWrangler approaches this work as data wrangling. The research asks how people notice issues, decide what matters, and assess suggested repairs.",
+  "role": "As first author, I led the interface design, system development, and end-to-end research: study design, recruitment, the moderated remote lab study, the two-week take-home study, interview and survey coding, thematic synthesis, and writing.",
+  "team": "Shiyi He, El Kindi Rezig, Paul Rosen, Andrew McNutt",
   "sections": [
     {
-      "id": "question",
-      "label": "The problem",
-      "title": "A difference is not yet an explanation.",
-      "body": "When a dataset changes, an analyst wants to know which groups changed and how. A detailed list of edits can be overwhelming, while an overly broad summary can hide important differences. The interface needs to make these alternatives understandable and inspectable.",
-      "callout": "What information does a person need to judge whether a change summary is useful?"
-    },
-    {
       "id": "approach",
-      "label": "Interaction design",
-      "title": "Turn model settings into an exploration workflow.",
-      "body": "I designed a workflow for uploading two data versions, choosing a target attribute, reviewing recommended attributes, and requesting explanations. People can adjust how many attributes a summary uses and the balance between accuracy and interpretability.",
-      "steps": [
-        "Choose data versions",
-        "Select attributes",
-        "Compare summaries",
-        "Inspect coverage"
-      ],
-      "extra": "Defaults offer a starting point, while the controls let people refine the question and the level of detail they want to see."
+      "label": "Study design",
+      "title": "From a structured task to everyday use.",
+      "body": "The first phase was a moderated remote study: participants completed bibliography-cleaning tasks with BibWrangler and their usual workflows while thinking aloud, followed by an interview about their decisions and experience. In the second phase, they used BibWrangler in their own projects for two weeks and completed a take-home questionnaire.",
+      "widget": "bib-study"
     },
     {
       "id": "evidence",
-      "label": "The interface",
-      "title": "Show the rule and the records it describes.",
-      "body": "The interface presents ranked explanations alongside their scores. Opening an explanation reveals a partition view: each region represents a group of records, with its size indicating coverage and further details available on inspection.",
+      "label": "Key findings",
+      "title": "Useful support needed to fit researchers’ workflows, reflect their context, and keep them in control of repairs.",
+      "body": "Researchers brought different workflows and quality standards to bibliography cleaning. BibWrangler helped them notice problems they had missed. They still needed to decide which issues were worth fixing and check whether the repairs were correct.",
       "cards": [
         [
-          "Recommend a starting point",
-          "Surface relevant attributes before asking users to configure a summary."
+          "Workflow fit depended on the writing stage",
+          "Researchers used BibWrangler as a checkpoint before submission, during incremental editing, or when merging bibliography files. It needed to fit around established writing and reference-management practices."
         ],
         [
-          "Expose the trade-off",
-          "Keep accuracy and interpretability visible when comparing alternatives."
+          "Quality standards depended on context",
+          "What counted as an issue depended on entry type, venue conventions, and project needs. Researchers wanted validation and repair guidance that recognized those differences, such as suggesting appropriate fields or standard venue abbreviations."
         ],
         [
-          "Make coverage inspectable",
-          "Connect each conditional transformation to the data partition it describes."
+          "More visible issues created prioritization work",
+          "An overview exposed problems that familiar workflows could miss. More warnings also required researchers to decide what deserved attention and could interrupt the task they were trying to finish."
+        ],
+        [
+          "Automation shifted effort toward verification",
+          "Bulk repairs made larger cleaning tasks manageable, while researchers still wanted to inspect consequential changes. Confidence depended on understanding what changed and being able to review it."
         ]
-      ],
-      "widget": "charles"
+      ]
     },
     {
       "id": "implications",
-      "label": "Design rationale",
-      "title": "Give people a way to question the summary.",
-      "body": "The design rationale is to make explanation exploration an iterative process. Attribute selection narrows the question, complexity controls change the form of the answer, and coverage views let people examine its scope.",
-      "extra": "My contribution connects model-generated results with a workflow people can configure, compare, and inspect."
+      "label": "Design opportunities",
+      "title": "Help people review, prioritize, and return to writing.",
+      "body": "The themes point toward giving researchers more control over what gets fixed and how repairs fit into their existing work.",
+      "cards": [
+        [
+          "Make changes easy to review",
+          "Show before-and-after edits, mark recently changed entries, and let people revisit bulk repairs."
+        ],
+        [
+          "Provide contextual checks and guidance",
+          "Use entry type, venue conventions, and project requirements to guide validation and repair suggestions. Explain why a field is flagged and show an appropriate value or format."
+        ],
+        [
+          "Let researchers set the priorities",
+          "Let researchers sort, filter, or defer issues according to what matters for the current project and writing stage."
+        ],
+        [
+          "Reduce handoffs during writing",
+          "Connect bibliography checking with the writing and reference-management environments researchers already use."
+        ]
+      ]
+    }
+  ],
+  "links": [
+    [
+      "Try BibWrangler",
+      "https://bib-wrangler.netlify.app/"
+    ]
+  ],
+  "sourceNote": "Based on the research protocol and thematic coding. Submitted to CHI, as confirmed by Shiyi He. First authorship and end-to-end research ownership confirmed by Shiyi He. Participant records, transcripts, and private source links are intentionally omitted from the portfolio."
+},
+{
+  "id": "palette",
+  "number": "05",
+  "short": "Color palette tools",
+  "category": "ACCESSIBILITY & DESIGN BEHAVIOR",
+  "color": "yellow",
+  "title": "The tool changes what a designer notices.",
+  "question": "How does palette assistance shape design attention?",
+  "summary": "Exploring the relationship between design aids, accessibility constraints, and creative judgment across four palette tools.",
+  "methods": [
+    "Think-aloud",
+    "Comparative evaluation",
+    "Remote study"
+  ],
+  "stat": "40 designers",
+  "venue": "IEEE VIS Poster 2026",
+  "time": "3 min",
+  "takeaway": "Early observations suggest that palette tools shape both the colors people produce and the constraints they attend to.",
+  "intro": "Color palette design involves competing priorities. This exploratory study examined how different forms of assistance shape both the resulting palettes and the reasoning behind them.",
+  "role": "As first author, I owned the research end to end: tool comparison, task and study design, reVISit implementation and deployment, recruitment, data collection, qualitative and quantitative analysis, synthesis, and writing.",
+  "team": "Shiyi He, Andrew McNutt",
+  "sections": [
+    {
+      "id": "approach",
+      "label": "Study design",
+      "title": "Compare reasoning alongside palette outcomes.",
+      "body": "I recruited 40 self-identified designers through Prolific. Each used one assigned tool across accessibility, thematic, and freestyle tasks while thinking aloud.",
+      "widget": "palette-study",
+      "extra": "I deployed the online study through <a class=\"study-platform-link\" href=\"https://revisit.dev/\" target=\"_blank\" rel=\"noopener noreferrer\">reVISit</a>, a platform for running online user studies, capturing screen recordings, think-aloud audio, task time, and final palettes."
     },
     {
-      "id": "reflection",
-      "label": "Scope & reflection",
-      "title": "A model summary is a hypothesis to examine.",
-      "body": "The published work is a system demonstration. Its summaries describe patterns in the supplied data; they do not establish the external cause of a change. This case does not claim a completed usability study or measured improvement in user performance.",
-      "extra": "A useful next evaluation would ask whether people can identify the affected records, understand the accuracy–interpretability trade-off, and recognize when a summary leaves important variation unexplained."
+      "id": "evidence",
+      "label": "Preliminary observations",
+      "title": "Early patterns in palette outcomes and design attention.",
+      "body": "The study suggested that accessibility support could influence both palette outcomes and what designers paid attention to, even when accessibility was not the main task goal.",
+      "figure": {
+        "title": "Study results",
+        "src": "assets/palette/study-results.svg",
+        "width": 2464,
+        "height": 612,
+        "alt": "Results across the four tools and task conditions, showing foreground-background contrast, pairwise color distance, completion time, and the proportion of thinking devoted to accessibility.",
+        "caption": "Palette metrics, task time, and accessibility-related reasoning across conditions.",
+        "sourceLabel": "Figure 1 · Color palette tools paper",
+        "sourceUrl": "https://arxiv.org/html/2608.19148v1"
+      },
+      "cards": [
+        [
+          "Differences were more apparent in accessibility tasks",
+          "Color Buddy palettes showed stronger foreground-background contrast; QualPal palettes showed greater inter-color distinguishability. Participants using these tools also completed accessibility tasks more quickly than those using ColorExplorer in this exploratory study."
+        ],
+        [
+          "Tools appeared to shape both outcomes and attention",
+          "Even when accessibility was not required, QualPal’s generated palettes favored color distinguishability, while Color Buddy’s contrast warnings drew participants’ attention to accessibility during thematic and freestyle tasks. These patterns suggest that tools can influence design through both built-in functionality and the considerations they bring into focus."
+        ],
+        [
+          "Visible checks could constrain exploration",
+          "Some participants found repeated warnings frustrating or questioned suggested colors. Making a constraint actionable could also pull attention away from other design goals."
+        ]
+      ]
     }
   ],
   "links": [
     [
       "Read the paper",
-      "https://doi.org/10.1145/3722212.3725089"
+      "https://arxiv.org/abs/2608.19148"
     ],
     [
-      "Open-access paper",
+      "Explore the reVISit study",
+      "https://shiyihe-neko.github.io/reVISit_study/color-buddy/"
+    ]
+  ],
+  "sourceNote": "Research summary: Trade-offs in Data Color Palette Design Tools. Coding vocabulary: project coding schema. First authorship and end-to-end research ownership confirmed by Shiyi He."
+},
+{
+  "id": "charles",
+  "number": "06",
+  "short": "ChARLES",
+  "category": "DATABASE SYSTEMS",
+  "color": "sand",
+  "title": "From database changes to semantic summaries.",
+  "question": "How can changes between database snapshots be summarized accurately and concisely?",
+  "summary": "Implementing a database system that discovers, ranks, and visualizes semantic summaries of changes between relational data snapshots.",
+  "methods": [
+    "K-means clustering",
+    "Linear regression",
+    "Semantic summarization",
+    "Interactive visualization"
+  ],
+  "stat": "Database system demonstration",
+  "venue": "SIGMOD 2025 Demo",
+  "time": "4 min",
+  "takeaway": "ChARLES discovers and ranks conditional transformations that summarize how groups of records changed.",
+  "intro": "ChARLES compares two snapshots of a relational database to discover semantic summaries of numerical value changes. We implemented data partitioning, linear transformation discovery, and summary ranking, with a graphical interface for configuring the search and inspecting results.",
+  "role": "As first author, I developed the explanation-exploration interface, including attribute recommendations, adjustable explanation complexity, and data-coverage views. My work connected model-generated summaries to an interactive workflow for inspecting and comparing explanations.",
+  "team": "Shiyi He, Alexandra Meliou, Anna Fariha",
+  "sections": [
+    {
+      "id": "approach",
+      "label": "Algorithm & implementation",
+      "title": "Discover partitions, infer transformations, and rank summaries.",
+      "body": "Given two snapshots with the same schema and records, the engine explains changes to a numerical attribute through the following pipeline.",
+      "widget": "charles-algorithm"
+    },
+    {
+      "id": "evidence",
+      "label": "Interface & features",
+      "title": "Configure the search and inspect the results.",
+      "body": "The interface connects the setup assistant with the discovery engine, ranked summaries, and partition visualizations.",
+      "figure": {
+        "title": "Interface walkthrough",
+        "src": "assets/charles/paper-interface.png",
+        "width": 2608,
+        "height": 1298,
+        "alt": "Annotated ChARLES interface: upload two datasets, choose the changed attribute, adjust attribute counts and the accuracy-interpretability balance, review recommended attributes, request ranked summaries, and inspect data partitions in a detailed visualization.",
+        "caption": "",
+        "sourceLabel": "Figure 4 · ChARLES paper",
+        "sourceUrl": "https://arxiv.org/html/2409.18386v1"
+      },
+      "cards": [
+        [
+          "Attribute selection and search bounds",
+          "Select the target attribute, review suggested attributes, and set c and t to limit the attributes used in conditions and transformations."
+        ],
+        [
+          "Summary ranking and score controls",
+          "Adjust α to balance accuracy and interpretability. Review the overall score and its two components for each ranked summary."
+        ],
+        [
+          "Partition inspection",
+          "Open a summary to inspect its data partitions, coverage, and corresponding transformation rules."
+        ]
+      ]
+    },
+    {
+      "id": "functionality",
+      "label": "Example output",
+      "title": "Connect a group of records with its change rule.",
+      "body": "A summary consists of conditional transformations. Each condition identifies a data partition; its transformation describes how the values changed. In this bonus example, the condition selects employees with a PhD and the rule describes their bonus increase.",
+      "widget": "charles-output",
+      "extra": "Several conditional transformations form a summary covering different record groups. The system ranks alternative summaries and lets users inspect their accuracy, interpretability, and data coverage."
+    }
+  ],
+  "links": [
+    [
+      "Read the paper",
       "https://arxiv.org/abs/2409.18386"
     ]
   ],
-  "sourceNote": "Based on the SIGMOD 2025 demonstration paper, interface design notes, and my UXR résumé. The explanations in the interactive example are synthetic and illustrate granularity rather than reproducing model output or empirical results."
+  "sourceNote": "Based on the SIGMOD 2025 demonstration paper, interface design notes, and my UXR résumé. The explanations in the interactive example are synthetic and illustrate granularity rather than reproducing model output or empirical results.",
+  "factLabel": "SYSTEM",
+  "questionLabel": "PROBLEM"
 }
 ];
