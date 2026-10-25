@@ -1,13 +1,14 @@
 const projects = [
 {
   "id": "qualivision",
+  "showFacts": false,
   "number": "01",
   "short": "QualiVision",
   "category": "HUMAN–AI INTERACTION",
   "color": "blue",
   "title": "Traceable analysis. AI-supported reflection.",
-  "question": "How can traceable analysis and AI-supported reflection help researchers make sense of qualitative video data?",
-  "summary": "Designing QualiVision for traceable qualitative video analysis, connecting evidence, codes, and interpretations while exploring how AI prompts can support reflection and preserve researcher control.",
+  "question": "How can an integrated workspace combine timeline-linked evidence, traceable coding relationships, visualization, and AI assistance to support reflection and insight exploration in qualitative video analysis?",
+  "summary": "Designing an integrated video-analysis workspace that links evidence, codes, and notes on a shared timeline, makes evolving coding relationships traceable and visually comparable, and supports reflection and insight exploration with AI.",
   "methods": [
     "Research through design",
     "System prototyping",
@@ -15,81 +16,71 @@ const projects = [
     "Traceability",
     "AI-supported reflection"
   ],
-  "stat": "Design probe · Working prototype",
+  "stat": "Early prototype · In development",
   "venue": "VL/HCC 2026 GC",
-  "time": "5 min",
-  "takeaway": "Make interpretations traceable and use AI to prompt reflection while researchers retain control.",
-  "intro": "I designed QualiVision to bring a fragmented qualitative video-analysis workflow into one workspace, connecting video, transcripts, coding, and analytic notes. A central goal is to make the evolution of an analysis traceable: how codes and interpretations change, why they change, and which evidence informs them. The design combines visual exploration with AI-assisted reflection to help researchers examine patterns, revisit interpretations, and explore new insights.",
+  "time": "4 min",
+  "intro": "I designed QualiVision to address fragmented qualitative video-analysis workflows by connecting video evidence, transcripts, codes, and analytic notes on a shared timeline. The design aims to make coding relationships and their evolution traceable and visually comparable. The project explores how visualization and AI can support researchers in revisiting evidence, reflecting on interpretations, and developing insights. QualiVision is currently an early prototype, with further features still in development.",
   "role": "As the sole author, I lead the project from problem framing and review of existing tools to interaction design, prototype implementation, and evaluation planning. I also use the prototype in my own video-based research analysis to identify workflow needs.",
   "team": "Shiyi He",
   "sections": [
     {
       "id": "question",
-      "label": "The problem",
-      "title": "A code is only useful if you can revisit what it means.",
-      "body": "Video-analysis work moves between clips, transcripts, spreadsheets, and notes. The design challenge is to preserve their relationships as an analysis changes: what happened, where it happened, how it was coded, and why that interpretation seemed useful.",
-      "callout": "How do we support evolving interpretations while preserving a clear route back to the source?"
-    },
-    {
-      "id": "approach",
-      "label": "Design approach",
-      "title": "Build around the analysis workflow.",
-      "body": "I use QualiVision as a design probe. Reviewing existing tools and using my own prototype helps me identify where coding, comparison, and reflection need better support. This directs the system toward a connected workspace rather than a collection of isolated analysis features.",
-      "steps": [
-        "Review existing tools",
-        "Prototype the workflow",
-        "Use it in analysis",
-        "Refine the design"
-      ],
-      "extra": "The research also explores a live spreadsheet layer for inspectable, editable records. Stable references between video segments and analytic records are central to this direction."
-    },
-    {
-      "id": "evidence",
-      "label": "The prototype",
-      "title": "Bring the evidence and the interpretation together.",
-      "body": "The initial prototype supports video playback, transcript editing, multiple coding streams, undo and redo, and preliminary visual summaries and reports. It has been used in my own video-based study analyses.",
+      "label": "Research questions",
+      "title": "Connect the workflow. Follow the analysis. Explore AI support.",
+      "body": "Qualitative video analysis is often fragmented across tools, while codes, relationships, and interpretations continue to evolve. QualiVision brings workflow integration, traceability, visual comparison, and AI-assisted reflection into three connected research questions:",
       "cards": [
         [
-          "Navigate the evidence",
-          "Keep video review, transcripts, and annotations in a shared workspace."
+          "RQ1 · Workflow integration",
+          "How can video evidence, transcripts, codes, and analytic notes be connected within a coherent analysis workflow?"
         ],
         [
-          "Preserve alternatives",
-          "Use separate coding streams to retain different analytic perspectives."
+          "RQ2 · Traceability and visual comparison",
+          "How can researchers trace evolving coding relationships and compare coding patterns across moments, coding streams, and stages of analysis?"
         ],
         [
-          "Develop the next layer",
-          "Explore synchronized spreadsheet records, visual comparison, and AI prompts as the system develops."
-        ]
-      ],
-      "widget": "qualivision"
-    },
-    {
-      "id": "implications",
-      "label": "Design principles",
-      "title": "Make assistance an invitation to inspect.",
-      "body": "My design direction is to make visualizations and AI prompts support questions, comparisons, and reflection. Suggestions should point researchers toward relevant evidence and leave interpretation open to revision.",
-      "cards": [
-        [
-          "Retain researcher control",
-          "Let researchers decide whether a suggestion fits their analysis."
-        ],
-        [
-          "Keep evidence traceable",
-          "Preserve links between source segments, codes, and analytic notes."
-        ],
-        [
-          "Support revision",
-          "Allow codes and interpretations to change as understanding develops."
+          "RQ3 · AI-assisted reflection",
+          "How can visualization and AI support researchers in reflecting on interpretations and exploring insights grounded in the evidence?"
         ]
       ]
     },
     {
-      "id": "reflection",
-      "label": "Next evaluation",
-      "title": "Evaluate sensemaking as well as task completion.",
-      "body": "The planned evaluation combines Comparative Structured Observation with case studies. It would compare QualiVision with a conventional multi-tool workflow on comparable analysis tasks, using performance measures, think-aloud data, and interviews. Longer use would examine how interpretations evolve.",
-      "extra": "Current status: a working prototype, with comparative evaluation and longer case studies planned."
+      "id": "evidence",
+      "label": "Prototype & design goals",
+      "title": "An early prototype, still in development.",
+      "body": "The early prototype supports video playback, transcript editing, multiple coding streams, undo and redo, and preliminary visual summaries and reports. I use it in my own video-based analyses. Further development focuses on the following contribution and design goals.",
+      "designContribution": {
+        "label": "Core design contribution",
+        "title": "Spreadsheets as the data-management backend.",
+        "body": "The design keeps annotation data in sync between the interface and a spreadsheet backend. Annotations added or edited in the interface will update the sheets, and edits made in the sheets will appear back in the interface.",
+        "rationale": "This will let researchers organize their annotation data and carry out their own analyses in the sheets, while keeping their changes in sync with the interface."
+      },
+      "cards": [
+        [
+          "Connect video annotations with the sheets",
+          "Keep codes and notes linked to video moments on the timeline, with annotation edits syncing both ways between the interface and the sheets."
+        ],
+        [
+          "Trace and compare changes in coding",
+          "Show how codes and their relationships change over time, and let researchers compare earlier and later coding."
+        ],
+        [
+          "Explore reflection with visualization and AI",
+          "Explore how visualizations and AI can help researchers reflect on interpretations and discover possible connections in the evidence."
+        ]
+      ]
+    },
+    {
+      "id": "next",
+      "label": "Next steps",
+      "title": "Continue developing QualiVision.",
+      "body": "The next stage will add two-way annotation sync between the interface and the sheets, views for tracing and comparing coding changes, and visual and AI support for reflection and insight exploration."
+    },
+    {
+      "id": "evaluation",
+      "label": "Evaluation plan",
+      "title": "From structured tasks to researchers’ own projects.",
+      "body": "I plan to begin with Comparative Structured Observation (CSO), comparing QualiVision with a conventional multi-tool workflow using tasks we provide. This phase will focus on usability and user experience, combining task performance, observations, and participant feedback to understand how well the tool supports qualitative video analysis.",
+      "extra": "To examine ecological validity, I then plan to invite researchers to use QualiVision in their own projects over a longer period. This will help me understand how it fits their existing practices and supports analysis as their questions, codes, and interpretations evolve in real use."
     }
   ],
   "links": [
