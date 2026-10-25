@@ -97,18 +97,66 @@ const projects = [
     question: 'How do interfaces shape the way people clean data?',
     summary: 'Looking beyond task completion to understand how people plan, explore, and verify their work across four tool paradigms.',
     methods: ['Mixed methods', 'Think-aloud', 'Remote study', 'Crowdwork study'],
-    stat: '40 freelancers', venue: 'VL/HCC 2026', time: '6 min',
+    stat: '40 freelancers', venue: 'VL/HCC 2026', time: '4 min',
     takeaway: 'Tool choice shapes strategies, but does not guarantee better outcomes.',
     intro: 'Data cleaning is more than a sequence of corrections. People must decide what looks wrong, what to change, and whether to trust the result. I studied these decisions across ChatGPT, Jupyter, Excel, and OpenRefine.',
     role: 'As first author, I owned the research end to end: study design, recruitment, reVISit implementation and remote deployment, data collection, mixed-methods analysis, synthesis, and writing.',
     team: 'Shiyi He, El Kindi Rezig, Paul Rosen, Andrew M. McNutt',
     sections: [
-      {id:'question', label:'The question', title:'A feature list cannot explain a workflow.', body:'The study examined how interface paradigms relate to cleaning strategies and outcomes. It compared a conversational assistant, a notebook, a spreadsheet, and a visual wrangler.', callout:'Research question: How does the tool change the way people approach the same data problem?'},
-      {id:'approach', label:'Study design', title:'Watch the process. Examine the result.', body:'Forty freelancers completed two cleaning tasks in a between-subjects study. reVISit captured screen and think-aloud recordings. Tool access used browser environments, including noVNC and JupyterLite. Analysis combined outputs, workload and usability questionnaires, and the Technical Dimensions of Programming Systems framework.', steps:['Assign one tool','Complete two tasks','Capture work + reasoning','Compare outputs + strategies'], extra:'This combination connects what participants produced with how they got there. My synthesis translated behavioral evidence into recommendations for task guidance, visible transformations, and human verification.'},
-      {id:'evidence', label:'Key finding', title:'A strategy shift, not a universal winner.', body:'No tool showed a consistent outcome advantage. Data-centered interfaces encouraged opportunistic corrections; abstraction-centered interfaces supported systematic transformations with added cognitive demands. The analysis was exploratory, not a statistical ranking.', callout:'The design opportunity is to support transitions between seeing a problem, applying a transformation, and checking its consequences.', widget:'wrangling'},
-      {id:'implications', label:'Design implications', title:'Make transformations visible and verifiable.', body:'The practical recommendations in my research synthesis focus on task-oriented guidance, visibility of data transformations, and human verification of AI assistance.', cards:[['Guide the next step','Help people connect a task goal with a suitable cleaning action.'],['Expose transformations','Make it possible to inspect what a correction changes.'],['Support verification','Keep human judgment involved when reviewing AI-assisted results.']], extra:'These are design recommendations from the study, rather than claims of a shipped product improvement.'},
-      {id:'reflection', label:'Scope & reflection', title:'Preserve the distinction between capability and outcome.', body:'The study covers two tasks and short-term use. Its results characterize trade-offs within that setting. They do not establish a generally best wrangling tool.', extra:'A next evaluation could test whether the proposed guidance and verification features help people detect incomplete or inappropriate transformations.'}
-    ],
+  {
+    "id": "approach",
+    "label": "Study design",
+    "title": "Follow each cleaning task from action to outcome.",
+    "body": "I compared how participants approached the same two cleaning tasks using different tools. I used <a class=\"study-platform-link\" href=\"https://revisit.dev/\" target=\"_blank\" rel=\"noopener noreferrer\">reVISit</a>, an open-source platform for running online user studies, to deploy the study remotely and collect screen and think-aloud recordings, cleaned datasets, and workload and usability questionnaires.",
+    "widget": "wrangling-study",
+    "extra": "I used the Technical Dimensions of Programming Systems framework to examine how interface characteristics related to participants’ cleaning strategies."
+  },
+  {
+    "id": "evidence",
+    "label": "Key findings",
+    "title": "Different interface trade-offs, no consistent advantage in output quality.",
+    "body": "Output comparisons showed no consistent advantage for one tool. Solutions were more similar in the constrained task and more varied in the open-ended task. The qualitative analysis identified seven design trade-offs; the four themes below are selected highlights.",
+    "widget": "wrangling",
+    "cards": [
+      [
+        "Visibility vs. Abstraction",
+        "Visible data made local issues easier to notice and encouraged opportunistic corrections. Abstraction-centered workflows supported systematic, compositional transformations, while requiring more cognitive and procedural effort."
+      ],
+      [
+        "Predictability vs. Simplicity",
+        "Natural-language interfaces made complex requests easier to express, but introduced ambiguity about the resulting actions. Explicit specifications offered more control and predictability, with additional procedural effort and opportunities for errors."
+      ],
+      [
+        "Big vs. Small Steps",
+        "One-shot automation simplified multi-step transformations but obscured intermediate states and downstream effects. Smaller steps gave users more opportunities to inspect results, adjust individual operations, and recover incrementally from errors."
+      ],
+      [
+        "Entangled Integration vs. Fragmented Splits",
+        "Separating data, transformations, and outputs made their roles clearer, but increased navigation and fragmented the workflow. Bringing them together supported continuous work while risking confusion between operations and results."
+      ]
+    ]
+  },
+  {
+    "id": "implications",
+    "label": "Design implications",
+    "title": "Make transformations visible and verifiable.",
+    "body": "The findings informed three design directions for helping people carry a cleaning decision through to a result they can inspect:",
+    "cards": [
+      [
+        "Guide the next step",
+        "Help users connect a task goal with an appropriate cleaning action."
+      ],
+      [
+        "Expose transformations",
+        "Show what a transformation changes so users can inspect its effects."
+      ],
+      [
+        "Combine complementary interaction styles",
+        "Explore notebooks with AI assistance, or combine spreadsheet-style data views with the programmable transformations of notebooks. These combinations could bring complementary strengths into one cleaning workflow."
+      ]
+    ]
+  }
+],
     links:[['Read the paper','https://arxiv.org/abs/2607.26198'],['Explore the reVISit study','https://wrangler-tdops-study.netlify.app/a-notebook']],
     sourceNote:'Publication details and methods: the linked paper. Recommendation summary: my October 2026 UXR résumé. First authorship and end-to-end research ownership confirmed by Shiyi He. Illustrations on this page are explanatory reconstructions.'
   },

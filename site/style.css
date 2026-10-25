@@ -44,3 +44,45 @@
 .design-contribution>p{font-size:14px;line-height:1.9}
 .design-contribution>.contribution-rationale{margin-top:17px;padding-top:17px;border-top:1px solid #cbd8d8;font-size:13px}
 @media(max-width:700px){.design-contribution{padding:20px 18px;margin:24px 0}.design-contribution>h3{font-size:22px}.design-contribution>p{font-size:13px}.design-contribution>.contribution-rationale{font-size:12px}}
+
+/* Make the wrangling study overview easier to scan. */
+.case-hero[data-project="wrangling"] .case-facts span{font-size:11px;letter-spacing:1.25px}
+.case-hero[data-project="wrangling"] .case-facts p{font-size:14px;line-height:1.75}
+@media(max-width:700px){.case-hero[data-project="wrangling"] .case-facts span{font-size:10px}.case-hero[data-project="wrangling"] .case-facts p{font-size:13px}}
+
+/* Wrangling study: assignment, tasks, evidence, and analysis. */
+.study-flow{margin:28px 0;background:#eef1e8;border:1px solid #d1dac9;border-radius:8px;padding:24px 20px}
+.study-flow figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:23px;color:var(--muted)}
+.study-flow figcaption strong{font-size:15px;font-weight:600;color:var(--ink)}
+.study-flow figcaption>span{font-size:12px}
+.study-flow-pipeline{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:24px;list-style:none;padding:0;margin:0}
+.study-flow-node{position:relative;display:flex;flex-direction:column;justify-content:center;min-width:0;background:#fbfcf7;border:1px solid #c9d3c0;border-radius:6px;padding:17px 14px;min-height:164px}
+.study-flow-node:not(:last-child)::after{content:'→';position:absolute;right:-21px;top:50%;transform:translateY(-50%);font-size:19px;color:#75846c}
+.study-flow-label{display:block;font-size:10px;font-weight:600;letter-spacing:1.1px;color:#6d7b63}
+.study-flow-node h3{font-size:17px;letter-spacing:-.4px;line-height:1.35;margin-top:12px}
+.study-flow-count{font-size:32px;font-weight:500;line-height:1;display:block;margin-bottom:5px}
+.study-flow-node>p{font-size:12px;line-height:1.65;margin-top:10px}
+.study-flow-tools{display:grid;grid-template-columns:1fr 1fr;gap:10px 8px;margin-top:14px}
+.study-flow-tools>span{display:flex;align-items:center;gap:6px;font-size:12px;white-space:nowrap}
+.study-flow-tools img{width:18px;height:18px;object-fit:contain;flex-shrink:0}
+.study-flow-connector{height:44px}.study-flow-connector svg{width:100%;height:44px;overflow:visible}
+.study-flow-connector path{fill:none;stroke:#96a58a;stroke-width:1.3;vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-linecap:round}
+.study-flow-evidence-label{text-align:center;margin:0 0 12px}
+.study-flow-evidence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.study-flow-evidence>div{background:#e3eadc;border:1px solid #d0dbc6;border-radius:6px;padding:17px 13px;min-width:0}
+.study-flow-evidence>div:nth-child(2){background:#efe4d9;border-color:#e2d4c6}
+.study-flow-evidence>div:nth-child(3){background:#e7e5ec;border-color:#d8d4e0}
+.study-flow-evidence h3{font-size:16px;letter-spacing:-.3px;line-height:1.4}
+.study-flow-evidence p{font-size:12px;line-height:1.75;margin-top:8px}
+.study-flow-analysis{border:1px solid #bdcdb1;border-radius:6px;background:#f8faf2;text-align:center;padding:19px 18px}
+.study-flow-analysis h3{font-size:19px;letter-spacing:-.4px;line-height:1.35}
+.study-flow-analysis p{font-size:13px;line-height:1.7;margin-top:8px}
+.study-flow-narrow{display:none}
+@media(max-width:800px){.study-flow-pipeline{grid-template-columns:1fr;gap:25px}.study-flow-node{min-height:0;padding:17px 18px}.study-flow-node h3{margin-top:8px}.study-flow-count{font-size:25px;display:inline;margin-right:4px}.study-flow-node:not(:last-child)::after{content:'↓';right:50%;top:auto;bottom:-25px;transform:translateX(50%)}.study-flow-tools{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.study-flow-wide{display:none}.study-flow-narrow{display:block;text-align:center;font-size:23px;line-height:44px;color:#96a58a}}
+@media(max-width:500px){.study-flow{padding:20px 15px}.study-flow figcaption{margin-bottom:20px;gap:4px}.study-flow-tools{grid-template-columns:1fr 1fr}.study-flow-evidence{grid-template-columns:1fr;gap:9px}.study-flow-evidence>div{padding:14px 16px}.study-flow-evidence p{margin-top:5px}}
+
+.study-platform-link{text-decoration:underline;text-underline-offset:3px;text-decoration-color:#a4b39b}
+.study-platform-link:hover{color:var(--accent)}
+.study-flow-tool-icon{display:inline-grid;place-items:center;width:22px;height:22px;flex-shrink:0}
+.study-flow-tools img.study-flow-logo-jupyter{width:24px;height:24px}
+.study-flow-tools img.study-flow-logo-openrefine{width:26px;height:26px}
