@@ -67,7 +67,16 @@ const projects = [
           "Explore reflection with visualization and AI",
           "Explore how visualizations and AI can help researchers reflect on interpretations and discover possible connections in the evidence."
         ]
-      ]
+      ],
+      "figure": {
+        "src": "assets/qualivision/system-architecture.png",
+        "width": 2034,
+        "height": 602,
+        "alt": "QualiVision system architecture: external video URLs feed the video analysis workspace; a Google Apps Script bridge connects annotations with spreadsheet storage; the Visual/AI dashboard presents summaries and prompts; an export module provides analysis data and summaries. The figure includes screenshots of the early workspace and dashboard.",
+        "caption": "System architecture and early prototype views.",
+        "sourceLabel": "Figure 1 · QualiVision paper",
+        "sourceUrl": "https://arxiv.org/html/2608.13594v1"
+      }
     },
     {
       "id": "next",
@@ -166,18 +175,68 @@ const projects = [
     question:'What makes a data format usable in practice?',
     summary:'Combining usability evaluation with practitioner interviews to understand how data formats shape the way people read, edit, and write data.',
     methods:['Usability evaluation','Practitioner interviews','Mixed methods','Crowdwork study'],
-    stat:'215 crowd workers + 9 practitioners', venue:'VL/HCC 2026', time:'7 min',
+    stat:'215 crowd workers + 9 practitioners', venue:'VL/HCC 2026', time:'4 min',
     takeaway:'Usability extends beyond syntax to the tools, practices, and communities around a format.',
     intro:'JSON, YAML, XML, and their peers represent similar information in different ways. Developers have strong preferences, but preference alone does not explain how easily someone can read, edit, or maintain a file.',
     role:'As first author, I owned the research end to end: study design, recruitment, reVISit implementation and remote deployment, the 215-participant usability study, nine practitioner interviews, analysis, synthesis, and writing.',
     team:'Shiyi He, Zach Cutler, Andrew M. McNutt',
     sections:[
-      {id:'question', label:'The question', title:'Turn a familiar debate into a researchable question.', body:'A format can look concise and still be difficult to maintain. Another can look verbose yet be easy to work with because editors, documentation, and established conventions remove effort. I wanted to separate the effects of notation from the surrounding workflow.', callout:'Does a different notation improve task performance—and what else shapes usability in practice?', widget:'dsf'},
-      {id:'approach', label:'Study design', title:'Two methods, two timescales.', body:'The controlled study compared short reading, modifying, and writing tasks across seven formats and two data contexts: tabular data and configuration. A separate interview study with nine practitioners examined the choices and maintenance work that a short experiment could not capture.', steps:['Compare notation','Measure task performance','Interview practitioners','Connect the evidence'], extra:'The experiment used a consistent Monaco editor with syntax highlighting and basic indentation. Linters and auto-formatting were disabled to reduce differences caused by editor assistance. reVISit recorded timing, keyboard input, and correctness. This choice made the comparison more controlled, while also creating an explicit limit on ecological validity.'},
-      {id:'evidence', label:'Key findings', title:'Limited performance differences. Rich differences in practice.', body:'There was no consistently best format across the tested tasks. HJSON and YAML showed advantages in some modification tasks, but those advantages did not persist across every level of task complexity. Practitioner interviews added a different explanation: familiar tools, compatibility, community conventions, and workflow expectations all contributed to usability.', cards:[['Notation is one layer','Syntax differences did not produce a stable overall performance winner.'],['Support changes the work','Formatters, linters, and programmatic generation reduce the amount of syntax people handle directly.'],['Maintenance has a context','Team conventions and ecosystem support affect what is practical to adopt and sustain.']], extra:'The combined interpretation is more useful than treating the absence of a consistent winner as an empty result. It redirects attention toward the conditions that help people work confidently with a format.'},
-      {id:'implications', label:'Design implications', title:'Improve the environment around the notation.', body:'My synthesis prioritized tooling, documentation, task complexity, and ecosystem support. For developer-facing products, these findings suggest evaluating the complete editing and maintenance workflow alongside the underlying format.', cards:[['Make errors actionable','Explain where a file breaks and how to recover.'],['Respect established workflows','Consider compatibility, team practices, and existing tool support.'],['Evaluate realistic tasks','Include editor assistance and longer maintenance work in follow-up studies.']], extra:'These implications are opportunities for design and evaluation. The study did not measure adoption or business impact after implementing them.'},
-      {id:'reflection', label:'Scope & reflection', title:'Be explicit about what the controls leave out.', body:'Short tasks and restricted editor assistance helped isolate notation, but they do not reproduce everyday development. The crowd sample leaned toward novices, and nine interviews provide depth rather than coverage of all developer roles.', extra:'An unexpectedly low-performing JSONC configuration condition was resampled; the reported results use the replacement sample. The research materials preserve both samples. A stronger follow-up would include more experienced developers, richer tooling, and longitudinal maintenance tasks.'}
+  {
+    "id": "approach",
+    "label": "Study design",
+    "title": "Compare notation, then look beyond it.",
+    "body": "I paired a controlled usability study with practitioner interviews to understand both how people perform with different formats and what makes those formats workable in everyday development.",
+    "widget": [
+      "dsf",
+      "dsf-study"
     ],
+    "extra": "I deployed the task study through <a class=\"study-platform-link\" href=\"https://revisit.dev/\" target=\"_blank\" rel=\"noopener noreferrer\">reVISit</a>, an open-source platform for running online user studies. All conditions used the same Ace editor with syntax highlighting and basic indentation; linting and automatic formatting were disabled to focus the comparison on notation."
+  },
+  {
+    "id": "evidence",
+    "label": "Key findings",
+    "title": "Limited performance differences. Rich differences in practice.",
+    "body": "The experiment did not identify a format that consistently performed best. Bringing those results together with the interviews helped explain why usability involves more than how a file looks. These four highlights connect the task results with the three interview themes.",
+    "cards": [
+      [
+        "No format was consistently best",
+        "In the task study, TOML, YAML, and HJSON outperformed XML when adding fields. These advantages did not extend across reading, authoring, or the easiest and hardest modifications. Task difficulty mattered more consistently than format."
+      ],
+      [
+        "Readability preferences differed",
+        "In interviews, some practitioners preferred indentation; others found explicit braces clearer. These preferences help explain competing views of “human-friendly” syntax, without establishing a universally easier notation."
+      ],
+      [
+        "Conventions shaped format choices",
+        "Practitioners often followed team practices, language ecosystems, or legacy requirements. Familiar examples, documentation, and compatibility made an established format practical to keep using."
+      ],
+      [
+        "Tools changed the effort of editing",
+        "Practitioners described using formatters, linters, and generated files to manage syntax. Their experiences pointed to early error detection and reliable editor support as important parts of usability."
+      ]
+    ]
+  },
+  {
+    "id": "implications",
+    "label": "Design implications",
+    "title": "Design for the whole format ecosystem.",
+    "body": "Usability comes from how syntax, tools, documentation, and shared practices work together. This shifts the design focus toward the support that makes formats manageable in everyday work.",
+    "cards": [
+      [
+        "Prioritize tooling over new syntax variants",
+        "Invest in linters, formatters, and IDE integration that help people work with existing formats. Strengthening this support may yield greater usability gains than introducing another syntactic variant."
+      ],
+      [
+        "Support conventions, onboarding, and migration",
+        "Format adoption depends on community practices, documentation, and familiar workflows. Shared tools and clear migration paths can support adoption while accounting for existing dependencies and the effort of switching."
+      ],
+      [
+        "Consider human factors in usability evaluation",
+        "Evaluate format usability in specific tasks and user contexts, considering differences in experience, language, and cultural background."
+      ]
+    ]
+  }
+],
     links:[['Read the paper','https://arxiv.org/abs/2607.26211']],
     sourceNote:'Based on the DSF manuscript, presentation notes, and my UXR résumé. First authorship and end-to-end research ownership confirmed by Shiyi He. The linked publication provides the full research context. Code examples below are newly created illustrations, not experimental stimuli.'
   },

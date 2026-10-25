@@ -45,10 +45,10 @@
 .design-contribution>.contribution-rationale{margin-top:17px;padding-top:17px;border-top:1px solid #cbd8d8;font-size:13px}
 @media(max-width:700px){.design-contribution{padding:20px 18px;margin:24px 0}.design-contribution>h3{font-size:22px}.design-contribution>p{font-size:13px}.design-contribution>.contribution-rationale{font-size:12px}}
 
-/* Make the wrangling study overview easier to scan. */
-.case-hero[data-project="wrangling"] .case-facts span{font-size:11px;letter-spacing:1.25px}
-.case-hero[data-project="wrangling"] .case-facts p{font-size:14px;line-height:1.75}
-@media(max-width:700px){.case-hero[data-project="wrangling"] .case-facts span{font-size:10px}.case-hero[data-project="wrangling"] .case-facts p{font-size:13px}}
+/* Make the research study overviews easier to scan. */
+.case-hero:is([data-project="wrangling"],[data-project="dsf"]) .case-facts span{font-size:11px;letter-spacing:1.25px}
+.case-hero:is([data-project="wrangling"],[data-project="dsf"]) .case-facts p{font-size:14px;line-height:1.75}
+@media(max-width:700px){.case-hero:is([data-project="wrangling"],[data-project="dsf"]) .case-facts span{font-size:10px}.case-hero:is([data-project="wrangling"],[data-project="dsf"]) .case-facts p{font-size:13px}}
 
 /* Wrangling study: assignment, tasks, evidence, and analysis. */
 .study-flow{margin:28px 0;background:#eef1e8;border:1px solid #d1dac9;border-radius:8px;padding:24px 20px}
@@ -86,3 +86,51 @@
 .study-flow-tool-icon{display:inline-grid;place-items:center;width:22px;height:22px;flex-shrink:0}
 .study-flow-tools img.study-flow-logo-jupyter{width:24px;height:24px}
 .study-flow-tools img.study-flow-logo-openrefine{width:26px;height:26px}
+
+/* Data formats: separate study paths leading to a shared synthesis. */
+.dsf-study-flow{background:#f0e8de;border-color:#dfcfbe}
+.dsf-study-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px;row-gap:0}
+.dsf-study-path{display:grid;grid-row:span 2;grid-template-rows:subgrid;min-width:0;background:#fbf8f2;border:1px solid #decebd;border-radius:6px;padding:20px 17px}
+.dsf-study-path:nth-child(2){background:#f5f6ef;border-color:#cfd6c6}
+.dsf-study-start{border-bottom:1px solid #d9d8cb;padding-bottom:17px}
+.dsf-study-start h3{font-size:17px;letter-spacing:-.3px;margin-top:10px;line-height:1.4}
+.dsf-study-path p.dsf-recruitment{font-size:12px;font-weight:500;line-height:1.6;color:var(--ink);margin-top:9px}
+.dsf-study-start h3 b{font-size:31px;font-weight:500;margin-right:4px}
+.dsf-study-path ol{list-style:none;margin:0;padding:0}
+.dsf-study-path li{margin:0}
+.dsf-study-path li:before{content:'';display:block;width:14px;height:16px;margin:15px 0 10px;background:center/14px 16px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16' viewBox='0 0 14 16'%3E%3Cpath d='M7 1v12m-5-5 5 5 5-5' fill='none' stroke='%2387937e' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.dsf-study-path h4{font-size:15px;font-weight:500;line-height:1.4;letter-spacing:-.25px;margin:0}
+.dsf-study-path p{font-size:12px;line-height:1.75;margin-top:7px}
+.dsf-study-formats{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}
+.dsf-study-formats span{border:1px solid #dfd0be;border-radius:20px;padding:2px 7px;font-size:10px;color:#806d58}
+.dsf-study-merge{height:34px;position:relative}
+.dsf-study-merge:before{content:'';position:absolute;left:calc((100% - 22px)/4);right:calc((100% - 22px)/4);top:0;height:13px;border:solid #96a58a;border-width:0 1px 1px;border-radius:0 0 3px 3px}
+.dsf-study-merge:after{content:'';position:absolute;left:50%;top:13px;height:15px;border-left:1px solid #96a58a}
+.dsf-study-merge span{position:absolute;left:calc(50% - 3px);top:22px;width:6px;height:6px;border:solid #96a58a;border-width:0 1px 1px 0;transform:rotate(45deg)}
+@media(max-width:700px){.dsf-study-paths{grid-template-columns:1fr;gap:16px}.dsf-study-path{display:block;grid-row:auto}.dsf-study-merge:before{display:none}.dsf-study-merge:after{top:0;height:28px}}
+
+/* Original QualiVision paper figure, with a full-resolution view. */
+.case-paper-figure{margin:29px 0 34px;border:1px solid #cbd7d9;border-radius:7px;background:#e7eef0;padding:16px}
+.paper-figure-image{display:block;background:#fff;border:1px solid #d0d9d9;border-radius:3px;overflow:hidden;cursor:zoom-in}
+.paper-figure-image img{display:block;width:100%;height:auto}
+.case-paper-figure figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:15px}
+.case-paper-figure figcaption>div{display:flex;flex-direction:column;gap:5px;min-width:0}
+.case-paper-figure figcaption span{font-size:12px;line-height:1.65;color:#4f6466}
+.case-paper-figure figcaption>div>a{font-size:10px;color:var(--muted);align-self:flex-start;border-bottom:1px solid #b4c3c4}
+.paper-figure-expand{display:inline-flex;align-items:center;gap:14px;white-space:nowrap;font-size:12px;padding:8px 11px;border:1px solid #bdcccd;border-radius:4px}
+.paper-figure-expand:hover{background:#dce7e9}
+@media(max-width:500px){.case-paper-figure{padding:10px}.case-paper-figure figcaption{align-items:flex-start;flex-direction:column}.paper-figure-expand{font-size:11px}}
+
+.paper-figure-image{width:100%;padding:0;color:inherit}
+.paper-figure-expand{background:transparent;color:var(--ink);font-family:inherit}
+.paper-figure-dialog{width:min(1500px,96vw);max-width:none;max-height:92vh;border:1px solid #bccdce;border-radius:8px;padding:0;background:var(--bg);color:var(--ink)}
+.paper-figure-dialog::backdrop{background:#142923b8}
+.paper-figure-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.paper-figure-toolbar>span{font-size:13px;font-weight:500}
+.paper-figure-toolbar>div{display:flex;gap:8px}
+.paper-figure-toolbar button{font-size:12px;padding:7px 11px;border:1px solid #bccdce;border-radius:4px;background:transparent}
+.paper-figure-scroll{overflow:auto;max-height:calc(92vh - 74px);padding:15px;background:#fff}
+.paper-figure-scroll img{display:block;width:100%;height:auto;max-width:none}
+.paper-figure-dialog.is-original img{width:2034px}
+body:has(.paper-figure-dialog[open]){overflow:hidden}
+@media(max-width:500px){.paper-figure-toolbar{align-items:flex-start;flex-direction:column;padding:12px}.paper-figure-scroll{padding:8px;max-height:calc(92vh - 114px)}}
