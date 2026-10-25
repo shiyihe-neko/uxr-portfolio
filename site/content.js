@@ -19,7 +19,7 @@ const projects = [
   "venue": "VL/HCC 2026 GC",
   "time": "5 min",
   "takeaway": "Make interpretations traceable and use AI to prompt reflection while researchers retain control.",
-  "intro": "Qualitative video analysis involves revisiting evidence as codes and interpretations evolve. I built QualiVision to connect video, transcripts, and coding in one workspace. The research explores traceability across that process and AI prompts that help researchers question assumptions, compare interpretations, and revisit source evidence.",
+  "intro": "I designed QualiVision to bring a fragmented qualitative video-analysis workflow into one workspace, connecting video, transcripts, coding, and analytic notes. A central goal is to make the evolution of an analysis traceable: how codes and interpretations change, why they change, and which evidence informs them. The design combines visual exploration with AI-assisted reflection to help researchers examine patterns, revisit interpretations, and explore new insights.",
   "role": "As the sole author, I lead the project from problem framing and review of existing tools to interaction design, prototype implementation, and evaluation planning. I also use the prototype in my own video-based research analysis to identify workflow needs.",
   "team": "Shiyi He",
   "sections": [
